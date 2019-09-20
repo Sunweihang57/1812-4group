@@ -1,7 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lenovo
- * Date: 2019/9/19
- * Time: 19:32
- */
+
+namespace App\Model;
+
+use Encore\Admin\Traits\ModelTree;
+use Illuminate\Database\Eloquent\Model;
+class Cate extends Model{
+
+}
+class GoodsModel extends Model
+{
+    use ModelTree;
+    protected $primaryKey='goods_id';
+    protected $table = 'goods';
+    public $timestamps = false;
+    public function author()
+    {
+        return $this->belongsTo(Cate::class, 'cate_id');
+
+    }
+
+
+}

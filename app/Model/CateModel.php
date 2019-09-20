@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class CateModel extends Model
 {
         use ModelTree;
-		protected $table = 'cate';
+        protected $primaryKey='cate_id';
+		protected $table = 'goods_cate';
 		public $timestamps = false;
 
 }
