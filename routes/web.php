@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'Test@mysql');
-Route::get('/test2', 'Test@redis');
+
