@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 
+Route::get('/index/index/index', 'Index\Index@index');      //前台首页视图
+
