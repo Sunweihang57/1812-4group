@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 
-use App\Http\
+use App\Model\GoodsModel;
 
 class Index extends Controller
 {
@@ -16,7 +16,8 @@ class Index extends Controller
      */
     public function index()
     {
-        
-        return view('index.index');
+        $data = GoodsModel::get()->toArray();
+        dd($data);
+        // return view('index.index');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Model\GoodsModel;
 use Encore\Admin\Controllers\AdminController;
 use App\Model\CateModel;
+use App\Model\BrandModel;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
@@ -68,12 +69,12 @@ class GoodsController extends AdminController
     {
         $form = new Form(new GoodsModel);
 
-        $form->text('goods_title', __('Goods title'));
-        $form->number('goods_price', __('Goods price'));
-        $form->text('goods_desc', __('Goods desc'));
-        $form->image('goods_img', __('Goods img'));
-        $form->select('cate_id', __('Cate id'))->options(CateModel::selectOptions());
-        $form->number('brang_id', __('Brang id'));
+        $form->text('goods_title', __('商品名称'));
+        $form->number('goods_price', __('商品价格'));
+        $form->text('goods_desc', __('商品描述'));
+        $form->image('goods_img', __('商品图片'));
+        $form->select('cate_id', __('所属分类'))->options(CateModel::selectOptions());
+        $form->select('brang_id', __('所属品牌'));//->options(BrandModel::selectOptions())
 
         return $form;
     }
