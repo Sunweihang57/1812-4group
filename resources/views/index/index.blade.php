@@ -9,54 +9,47 @@
 				<div class="divider-bottom"></div>
 			</div>
 
-			@foreach($data as $k=>$v)
+
 
 			<div class="row">
-				<div class="col s6">
-					<div class="content">
-						<img src="{{ asset('mstore/img/product-new1.png') }}" alt="">
+
+				@foreach($data as $k=>$v)
+
+				<div class="col s6" style="height: 400px; width: 500px;">
+					<div class="content" >
+						<img src="/uploads/{{$v->goods_img}}" style="height: 200px; width: 200px;"   />
 						<h6><a href="">{{$v->goods_title}}</a></h6>
 						<div class="price">
-							$20 <span>$28</span>
+							${{$v->goods_price}} <span>{{$v->goods_price}}</span>
 						</div>
 						<button class="btn button-default">ADD TO CART</button>
 					</div>
 				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="{{ asset('mstore/img/product-new2.png') }}" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
+
 
 			@endforeach
-			<div class="row margin-bottom">
-				<div class="col s6">
-					<div class="content">
-						<img src="{{ asset('mstore/img/product-new3.png') }}" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="content">
-						<img src="{{ asset('mstore/img/product-new4.png') }}" alt="">
-						<h6><a href="">Fashion Men's</a></h6>
-						<div class="price">
-							$20 <span>$28</span>
-						</div>
-						<button class="btn button-default">ADD TO CART</button>
-					</div>
-				</div>
-			</div>
+			{{--<div class="row margin-bottom">--}}
+				{{--<div class="col s6">--}}
+					{{--<div class="content">--}}
+						{{--<img src="{{ asset('mstore/img/product-new3.png') }}" alt="">--}}
+						{{--<h6><a href="">Fashion Men's</a></h6>--}}
+						{{--<div class="price">--}}
+							{{--$20 <span>$28</span>--}}
+						{{--</div>--}}
+						{{--<button class="btn button-default">ADD TO CART</button>--}}
+					{{--</div>--}}
+				{{--</div>--}}
+				{{--<div class="col s6">--}}
+					{{--<div class="content">--}}
+						{{--<img src="{{ asset('mstore/img/product-new4.png') }}" alt="">--}}
+						{{--<h6><a href="">Fashion Men's</a></h6>--}}
+						{{--<div class="price">--}}
+							{{--$20 <span>$28</span>--}}
+						{{--</div>--}}
+						{{--<button class="btn button-default">ADD TO CART</button>--}}
+					{{--</div>--}}
+				{{--</div>--}}
+			{{--</div>--}}
 		</div>
 	</div>
 
