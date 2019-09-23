@@ -27,7 +27,7 @@ class BrandController extends AdminController
         $grid = new Grid(new BrandModel);
 
         $grid->column('b_id', __('编号'));
-        $grid->column('b_name', __('品牌名称'));
+        $grid->column('title', __('品牌名称'));
         $grid->column('b_url', __('品牌地址'));
         $grid->column('b_logo', __('品牌图标'))->image();
         $grid->column('b_desc', __('品牌简介'));
@@ -49,7 +49,7 @@ class BrandController extends AdminController
         $show = new Show(BrandModel::findOrFail($id));
 
         $show->field('b_id', __('B id'));
-        $show->field('b_name', __('B name'));
+        $show->field('title', __('title'));
         $show->field('b_url', __('B url'));
         $show->field('b_logo', __('B logo'));
         $show->field('b_desc', __('B desc'));
@@ -70,7 +70,7 @@ class BrandController extends AdminController
         $form = new Form(new BrandModel);
 
         // $form->display('b_id', __('ID'));
-        $form->text('b_name', __('品牌名称'));
+        $form->text('title', __('品牌名称'));
         $form->text('b_url', __('品牌网址'));
         $form->image('b_logo', __('品牌图标'))->move('/brand');
         $form->text('b_desc', __('品牌简介'));

@@ -16,8 +16,11 @@ class Index extends Controller
      */
     public function index()
     {
-        $data = GoodsModel::get()->toArray();
-        dd($data);
-        // return view('index.index');
+        $data = GoodsModel::get();
+        //dd($data);
+
+        return view('index.index',compact('data'));
     }
+
+
 }

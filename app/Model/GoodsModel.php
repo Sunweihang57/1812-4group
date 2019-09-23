@@ -9,6 +9,11 @@ class Cate extends Model{
 
 }
 
+class Brand extends Model
+{
+
+}
+
 class GoodsModel extends Model
 {
     use ModelTree;
@@ -27,7 +32,4 @@ class GoodsModel extends Model
     }
 }
 
-class Brand extends Model
-{
 
-}

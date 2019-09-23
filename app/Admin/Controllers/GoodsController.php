@@ -74,7 +74,7 @@ class GoodsController extends AdminController
         $form->text('goods_desc', __('商品描述'));
         $form->image('goods_img', __('商品图片'));
         $form->select('cate_id', __('所属分类'))->options(CateModel::selectOptions());
-        $form->select('brang_id', __('所属品牌'));//->options(BrandModel::selectOptions())
+        $form->select('brang_id', __('所属品牌'))->options(BrandModel::selectOptions());
 
         return $form;
     }
